@@ -6,7 +6,7 @@
 
 <div align="center">
 
-# nonebot-plugin-template
+# nonebot-plugin-jmcomic
 
 _✨ NoneBot 插件简单描述 ✨_
 
