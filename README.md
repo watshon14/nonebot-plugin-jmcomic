@@ -12,7 +12,7 @@ _✨ NoneBot 插件简单描述 ✨_
 
 
 <a href="./LICENSE">
-    <img src="https://img.shields.io/github/license/owner/nonebot-plugin-template.svg" alt="license">
+    <img src="https://img.shields.io/github/license/watshon14/nonebot-plugin-template.svg" alt="license">
 </a>
 <a href="https://pypi.python.org/pypi/nonebot-plugin-template">
     <img src="https://img.shields.io/pypi/v/nonebot-plugin-template.svg" alt="pypi">
