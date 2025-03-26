@@ -4,7 +4,7 @@ import img2pdf
 import shutil
 import time
 from jmcomic import create_option_by_file, JmDownloader
-from nonebot import on_command
+from nonebot import on_command, get_driver
 from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, ActionFailed
 from nonebot.exception import FinishedException  # Corrected import
 import asyncio
@@ -15,18 +15,54 @@ import re
 # 定义命令处理器，监听 "/jm" 命令
 jm = on_command("jm", aliases=(), permission=None)
 
+# 获取项目根目录（动态获取 nonebot2 项目的根目录）
+project_root = os.path.abspath(get_driver().config.base_path or os.path.join(os.path.dirname(__file__), "../../.."))
+
 # 生成 PDF 文件的函数
 def generate_pdf(comic_id: str) -> str:
     temp_dir = None  # To store the temporary directory path for cleanup
     default_chapter_dirs = []  # To store the default download directories for cleanup
     try:
-        # 步骤 1: 指定配置文件路径
-        config_path = "/home/andy/Desktop/Project/nailongremove/nailongrm/config.yml"
+        
+# 步骤 1: 指定配置文件路径（从环境变量或项目根目录加载）
+        config_path = os.getenv("JM_PDF_CONFIG_PATH", os.path.join(project_root, "config.yml"))
         logger.info(f"步骤 1: 配置文件路径: {config_path}")
         
-        # 检查配置文件是否存在
+# 检查配置文件是否存在，如果不存在则创建默认 config.yml
         if not os.path.exists(config_path):
-            raise FileNotFoundError(f"配置文件未找到: {config_path}")
+            logger.warning(f"配置文件未找到: {config_path}. 创建默认 config.yml...")
+            default_config = """\
+client:
+  impl: api  # 使用 JmApiClient
+  retry_times: 5
+  postman:
+    meta_data:
+      proxies: system
+      headers:  # 设置与浏览器一致的 headers
+        User-Agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
+        Accept: "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+        Accept-Language: "zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2"
+        Referer: "https://18comic.vip/"
+      cookies:
+        AVS: ""  # 真实的 AVS 值
+        __cflb: ""  # 您提供的 __cflb 值
+        cf_clearance: ""  # 从浏览器中获取
+download:
+  cache: true
+  image:
+    decode: true
+    suffix: .jpg
+  threading:
+    image: 30
+  path: "./downloads"
+  thread: 4
+dir_rule:
+  base_dir: "./downloads"
+  rule: Bd_Ptitle
+"""
+            with open(config_path, "w", encoding="utf-8") as f:
+                f.write(default_config)
+            logger.info(f"已创建默认 config.yml: {config_path}")
         
         # 步骤 2: 使用配置文件生成 option 对象
         option = create_option_by_file(config_path)
