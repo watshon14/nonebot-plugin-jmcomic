@@ -6,7 +6,7 @@
 
 <div align="center">
 
-# nonebot-plugin-jmcomic
+# nonebot-plugin-jmcomicdownload
 
 _✨ NoneBot JMcomic下载后转换成pdf上传群文件 ✨_
 
@@ -48,7 +48,7 @@ _✨ NoneBot JMcomic下载后转换成pdf上传群文件 ✨_
 <summary>使用 nb-cli 安装</summary>
 在 nonebot2 项目的根目录下打开命令行, 输入以下指令即可安装
 
-    nb plugin install nonebot-plugin-jmcomic
+    nb plugin install nonebot-plugin-jmcomicdownload
 
 </details>
 
@@ -59,27 +59,27 @@ _✨ NoneBot JMcomic下载后转换成pdf上传群文件 ✨_
 <details>
 <summary>pip</summary>
 
-    pip install nonebot-plugin-jmcomic
+    pip install nonebot-plugin-jmcomicdownload
 </details>
 <details>
 <summary>pdm</summary>
 
-    pdm add nonebot-plugin-jmcomic
+    pdm add nonebot-plugin-jmcomicdownload
 </details>
 <details>
 <summary>poetry</summary>
 
-    poetry add nonebot-plugin-jmcomic
+    poetry add nonebot-plugin-jmcomicdownload
 </details>
 <details>
 <summary>conda</summary>
 
-    conda install nonebot-plugin-jmcomic
+    conda install nonebot-plugin-jmcomicdownload
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
 
-    plugins = ["nonebot-plugin-jmcomic"]
+    plugins = ["nonebot-plugin-jmcomicdownload"]
 
 </details>
 
