@@ -1,7 +1,7 @@
-# nonebot-plugin-jmcomic/pyproject.toml
+# nonebot-plugin-jmcomicdownload/pyproject.toml
 
 [project]
-name = "nonebot-plugin-jmcomic"
+name = "nonebot-plugin-jmcomicdownload"
 version = "1.0.0"
 description = "A NoneBot2 plugin to download comics from JMComic and generate PDFs for upload to group chats."
 readme = "README.md"
@@ -18,22 +18,22 @@ dependencies = [
 keywords = ["nonebot2", "plugin", "jmcomic"]
 
 packages = [
-    { include = "nonebot_plugin_jmcomic" }
+    { include = "nonebot_plugin_jmcomicdownload" }
 ]
 
 [project.urls]
-Homepage = "https://github.com/watshon14/nonebot-plugin-jmcomic"
-Repository = "https://github.com/watshon14/nonebot-plugin-jmcomic.git"
+Homepage = "https://github.com/watshon14/nonebot_plugin_jmcomicdownload"
+Repository = "https://github.com/watshon14/nonebot_plugin_jmcomicdownload.git"
 
 [tool.nonebot]
 adapters = [
     { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
 ]
-plugins = ["nonebot-plugin-jmcomic"]
+plugins = ["nonebot_plugin_jmcomicdownload"]
 
 [tool.pdm]
 [tool.pdm.build]
-includes = ["nonebot-plugin-jmcomic"]
+includes = ["nonebot_plugin_jmcomicdownload"]
 
 [build-system]
 requires = ["hatchling"]
