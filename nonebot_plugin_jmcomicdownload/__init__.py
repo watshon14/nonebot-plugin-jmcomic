@@ -12,6 +12,19 @@ from nonebot.log import logger
 import traceback
 import re
 
+#Meta
+__plugin_meta__ = PluginMetadata(
+    name="禁漫下载",
+    description="一个 NoneBot 插件，用于下载 JM 漫画并生成 PDF 文件，上传到群聊。",
+    type="application",
+    usage="使用方法：/jm <漫画ID> 示例：/jm 12345",
+    homepage="https://github.com/watshon14/nonebot_plugin_jmcomicdownload",
+    config=Config,
+    supported_adapters={"~onebot.v11"},
+)
+
+
+
 # 定义命令处理器，监听 "/jm" 命令
 jm = on_command("jm", aliases=(), permission=None)
 
