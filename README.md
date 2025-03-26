@@ -30,6 +30,8 @@ _✨ NoneBot JMcomic下载后转换成pdf上传群文件 ✨_
 
 纯编程小白，头一次写头一次搞插件也是头一次写github文档，出了问题会尽量去修的
 
+不知道怎么用nonebot的请看这个[文档](https://github.com/Refound-445/nonebot-plugin-nailongremove/blob/main/docs/tutorial.md)
+
 ## ⚠️ 注意事项
 
 ***人在海外肉身翻墙，不知道挂不挂代理会不会出问题，没有尝试过任何代理，如果报错请尝试代理和填写cookie***
