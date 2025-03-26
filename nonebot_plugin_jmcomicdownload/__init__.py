@@ -6,6 +6,7 @@ import time
 from jmcomic import create_option_by_file, JmDownloader
 from nonebot import on_command, get_driver
 from nonebot.adapters.onebot.v11 import Bot, GroupMessageEvent, ActionFailed
+from nonebot.plugin import PluginMetadata
 from nonebot.exception import FinishedException  # Corrected import
 import asyncio
 from nonebot.log import logger
