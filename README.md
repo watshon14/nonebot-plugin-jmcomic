@@ -14,7 +14,7 @@ _✨ NoneBot JMcomic下载后转换成pdf上传群文件 ✨_
 <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/watshon14/nonebot-plugin-jmcomic.svg" alt="license">
 </a>
-<a href="https://pypi.python.org/pypi/nonebot-plugin-template">
+<a href="https://pypi.python.org/pypi/nonebot-plugin-jmcomic.svg">
     <img src="https://img.shields.io/pypi/v/nonebot-plugin-jmcomic.svg" alt="pypi">
 </a>
 <img src="https://img.shields.io/badge/python-3.9+-blue.svg" alt="python">
