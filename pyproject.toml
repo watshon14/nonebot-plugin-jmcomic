@@ -22,3 +22,17 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/watshon14/nonebot-plugin-jmcomic"
 Repository = "https://github.com/watshon14/nonebot-plugin-jmcomic.git"
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
+]
+plugins = ["nonebot-plugin-jmcomic"]
+
+[tool.pdm]
+[tool.pdm.build]
+includes = ["nonebot-plugin-jmcomic"]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
