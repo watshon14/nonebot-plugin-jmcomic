@@ -24,7 +24,15 @@ _✨ NoneBot JMcomic下载后转换成pdf上传群文件 ✨_
 
 ## 📖 介绍
 
-这是一个 nonebot2 插件项目的模板库, 你可以直接使用本模板创建你的 nonebot2 插件项目的仓库
+基于[Python API For JMComic](https://github.com/hect0x7/JMComic-Crawler-Python)下载本子图片到本地然后通过[image2pdf](https://github.com/salikx/image2pdf)整合成单个pdf然后上传到群文件
+
+***请保证群文件有空间上传，否则会报错***
+
+~因为看见了qq群转发的核心科技所以自己也想搞一个~
+
+纯编程小白，头一次写头一次搞插件也是头一次写github文档，出了问题会尽量去修的
+
+
 
 ## 💿 安装
 
@@ -43,27 +51,27 @@ _✨ NoneBot JMcomic下载后转换成pdf上传群文件 ✨_
 <details>
 <summary>pip</summary>
 
-    pip install nonebot-plugin-template
+    pip install nonebot-plugin-jmcomic
 </details>
 <details>
 <summary>pdm</summary>
 
-    pdm add nonebot-plugin-template
+    pdm add nonebot-plugin-jmcomic
 </details>
 <details>
 <summary>poetry</summary>
 
-    poetry add nonebot-plugin-template
+    poetry add nonebot-plugin-jmcomic
 </details>
 <details>
 <summary>conda</summary>
 
-    conda install nonebot-plugin-template
+    conda install nonebot-plugin-jmcomic
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
 
-    plugins = ["nonebot_plugin_template"]
+    plugins = ["nonebot-plugin-jmcomic"]
 
 </details>
 
@@ -81,8 +89,9 @@ _✨ NoneBot JMcomic下载后转换成pdf上传群文件 ✨_
 | 指令 | 权限 | 需要@ | 范围 | 说明 |
 |:-----:|:----:|:----:|:----:|:----:|
 | /jm | 群员 | 否 | 群聊 | 空一格后输入神秘数字即可 |
+
 ### 效果图
-如果有效果图的话
+![下载效果图](./doc/sample_screenshot.jpg)
 
 
 ## 🙏 鸣谢
