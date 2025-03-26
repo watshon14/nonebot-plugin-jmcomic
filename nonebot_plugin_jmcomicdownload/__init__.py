@@ -14,7 +14,7 @@ import re
 
 #Meta
 __plugin_meta__ = PluginMetadata(
-    name="禁漫下载",
+    name="jmcomicdownload",
     description="一个 NoneBot 插件，用于下载 JM 漫画并生成 PDF 文件，上传到群聊。",
     type="application",
     usage="使用方法：/jm <漫画ID> 示例：/jm 12345",
