@@ -4,7 +4,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "nonebot-plugin-jmcomicDL"
+name = "nonebot-plugin-jmcomic"
 version = "1.0.0"
 description = "A NoneBot2 plugin to download comics from JMComic and generate PDFs for upload to group chats."
 readme = "README.md"
@@ -20,7 +20,7 @@ dependencies = [
 ]
 keywords = ["nonebot2", "plugin", 'jmcomic"]
 packages = [
-    { include = "nonebot-plugin-jmcomicDL" }
+    { include = "nonebot-plugin-jmcomic" }
 ]
 
 
@@ -32,11 +32,11 @@ Repository = "https://github.com/watshon14/nonebot-plugin-jmcomic.git"
 adapters = [
     { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
 ]
-plugins = ["nonebot-plugin-jmcomicDL"]
+plugins = ["nonebot-plugin-jmcomic"]
 
 [tool.pdm]
 [tool.pdm.build]
-includes = ["nonebot-plugin-jmcomicDL"]
+includes = ["nonebot-plugin-jmcomic"]
 
 [build-system]
 requires = ["pdm-backend"]
