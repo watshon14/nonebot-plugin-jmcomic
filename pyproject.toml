@@ -1,7 +1,7 @@
-# nonebot-plugin-jmcomicdownload/pyproject.toml
+# nonebot_plugin_jmcomicdownload/pyproject.toml
 
 [project]
-name = "nonebot-plugin-jmcomicdownload"
+name = "nonebot_plugin_jmcomicdownload"
 version = "1.0.0"
 description = "A NoneBot2 plugin to download comics from JMComic and generate PDFs for upload to group chats."
 readme = "README.md"
