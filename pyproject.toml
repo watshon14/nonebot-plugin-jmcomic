@@ -1,7 +1,4 @@
 # nonebot-plugin-jmcomic/pyproject.toml
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
 
 [project]
 name = "nonebot-plugin-jmcomic"
@@ -18,11 +15,11 @@ dependencies = [
     "img2pdf>=0.6.0",
     "jmcomic>=2.5.32",
 ]
-keywords = ["nonebot2", "plugin", 'jmcomic"]
-packages = [
-    { include = "nonebot-plugin-jmcomic" }
-]
+keywords = ["nonebot2", "plugin", "jmcomic"]
 
+packages = [
+    { include = "nonebot_plugin_jmcomic" }
+]
 
 [project.urls]
 Homepage = "https://github.com/watshon14/nonebot-plugin-jmcomic"
@@ -39,5 +36,6 @@ plugins = ["nonebot-plugin-jmcomic"]
 includes = ["nonebot-plugin-jmcomic"]
 
 [build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
