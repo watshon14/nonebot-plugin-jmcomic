@@ -20,7 +20,6 @@ __plugin_meta__ = PluginMetadata(
     type="application",
     usage="使用方法：/jm <漫画ID> 示例：/jm 12345",
     homepage="https://github.com/watshon14/nonebot_plugin_jmcomicdownload",
-    config=Config,
     supported_adapters={"~onebot.v11"},
 )
 
