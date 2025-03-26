@@ -8,16 +8,21 @@ name = "nonebot-plugin-jmcomic"
 version = "1.0.0"
 description = "A NoneBot2 plugin to download comics from JMComic and generate PDFs for upload to group chats."
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.9,<4.0"
 license = "MIT"
 authors = [
     { name = "watshon14", email = "2128433395@qq.com" },
 ]
 dependencies = [
-    "nonebot2>=2.0.0",
-    "img2pdf>=0.4.4",
-    "jmcomic>=0.1.0",
+    "nonebot2>=2.4.0",
+    "img2pdf>=0.6.0",
+    "jmcomic>=2.5.32",
 ]
+keywords = ["nonebot2", "plugin", 'jmcomic"]
+packages = [
+    { include = "nonebot-plugin-jmcomic" }
+]
+
 
 [project.urls]
 Homepage = "https://github.com/watshon14/nonebot-plugin-jmcomic"
