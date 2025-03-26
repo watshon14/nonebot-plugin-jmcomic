@@ -16,7 +16,7 @@ import re
 jm = on_command("jm", aliases=(), permission=None)
 
 # 获取项目根目录（动态获取 nonebot2 项目的根目录）
-project_root = os.path.abspath(get_driver().config.base_path or os.path.join(os.path.dirname(__file__), "../../.."))
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../.."))
 
 # 生成 PDF 文件的函数
 def generate_pdf(comic_id: str) -> str:
